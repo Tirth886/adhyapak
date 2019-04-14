@@ -1,0 +1,294 @@
+// This if Conditions for checking whether the form is empty or not
+
+	// if(empty($name) || empty($email) || empty($phone) || empty($password) || empty($password_repeat) || empty($gender)){
+	// 	if(empty($name)){
+	// 		$data['name_validate'] = "name required";
+	// 	}else{}
+
+	// 	if(empty($email)){
+	// 		$data['email_validate'] = "email required";
+	// 	}else{}
+
+	// 	if(empty($phone)){
+	// 		$data['phone_validate'] = "number required";
+	// 	}else{}
+
+	// 	if(empty($password)){
+	// 		$data['password_validate'] = "password reuired";
+	// 	}else{}
+
+	// 	if(empty($password_repeat)){
+	// 		$data['password_repeat_validate'] = "confirmation required";
+	// 	}else{}
+
+	// 	if(empty($gender)){
+	// 		$data['gender_validate'] = "*";
+	// 	}else{}
+
+	// }
+
+	// This conditions are for those who wrongly fill the form to validate them
+
+	// elseif (!empty($name) || !empty($email) || !empty($phone) || !empty($password) || !empty($password_repeat) || !empty($gender)) {
+		
+	// 	if(!preg_match("/^[a-zA-Z ]{3,10}$/",$name)){
+	// 		$data['name_validate'] = "invalid formate: min 3 and max 10 char";
+	// 	}else{}
+		
+	// 	if (!preg_match("/^[a-zA-Z0-9.]+@+[gmail || yahoo || rediffmail]+\.+[com]{2,3}$/", $email)) {
+	// 		$data['email_validate'] = "invalid formate: example@domain.com";
+	// 	}else{}
+		
+	// 	if(!preg_match("/^[0-9]{10}$/",$phone)){
+	// 		$data['phone_validate'] = "invalid formate: enter correct number";
+	// 	}else{}
+
+	// 	if(!preg_match("/^[a-zA-Z0-9]{6,13}$/",$password)){
+	// 	$data['password_validate'] = "invalid formate: min 3 and max 13 alphanumeric series";
+	// 	}else{}
+
+	// 	if ($password && $password_repeat) {
+	// 		if(!$password_repeat===$password){
+	// 			$data['password_repeat_validate'] = "password must match";
+	// 		}else{}
+	// 	}else{}
+	// }
+
+	// after all this when user fill the Correct Data then query check wheather the email is exist or not
+
+	// else{
+
+
+
+
+
+	#Java Script Backup
+
+
+
+	// Client Side Validation
+
+// // Registration Form Validation
+
+// function get_user_validate(){
+
+// 	// Name Validation
+
+// 	var count = 0;
+	
+// 	var a = document.getElementById('name');
+// 	var a_reg = /^[a-zA-Z ]{3,10}$/; 
+// 	if(a.value==""){
+// 		// document.getElementById('name_validate').innerHTML = "";
+// 		a.style.borderColor = "red";
+// 		a.style.transition = "1.5s";
+// 		count++;
+// 	}
+// 	else if(!a_reg.test(a.value)){
+// 		a.style.borderColor = "red";
+// 		a.style.transition = "1.5s";
+// 		a.value = "";
+// 		count++;
+// 	}
+// 	else{
+// 		a.style.borderColor = "";
+// 		a.style.transition = "1.5s";	
+// 	}
+
+// 	// Email Validation 
+
+// 	var b = document.getElementById('email');
+// 	var b_reg = /^[a-zA-Z0-9.]+@+[gmail || yahoo || rediffmail]+\.+[com]{2,3}$/;
+
+// 	if(b.value==""){
+// 		b.style.borderColor = "red";
+// 		b.style.transition  = "1.5s";
+// 		count++;
+// 	}
+// 	else if(!b_reg.test(b.value)){
+// 		b.style.borderColor = "red";
+// 		b.style.transition  = "1.5";
+// 		b.value = "";
+// 		count++;	
+// 	}
+// 	else{
+// 		b.style.borderColor = "";
+// 		b.style.transition = "1.5s";	
+// 	}
+
+// 	// Phone Number Validation
+
+// 	var c = document.getElementById('phone');
+// 	var c_reg = /^[0-9]{10}$/;
+
+// 	if(c.value==""){
+// 		c.style.borderColor = "red";
+// 		c.style.transition = "1.5s";
+// 		count++;
+// 	}
+// 	else if(!c_reg.test(c.value)){
+// 		c.style.borderColor = "red";
+// 		c.style.transition = "1.5s";
+// 		c.value="";
+// 		count++;	
+// 	}
+// 	else{
+// 		c.style.borderColor = "";
+// 		c.style.transition = "1.5s";	
+// 	}
+
+// 	// Password Validation
+
+// 	var d = document.getElementById('password');
+// 	var d_reg = /^[a-zA-Z0-9]{6,13}$/;
+
+// 	if(d.value==""){
+// 		d.style.borderColor = "red";
+// 		d.style.transition = "1.5s";
+// 		count++;
+// 	}
+// 	else if(!d_reg.test(d.value)){
+// 		d.style.borderColor = "red";
+// 		d.style.transition = "1.5s";
+// 		d.value = "";
+// 		count++;
+// 	}
+// 	else{
+// 		d.style.borderColor = "";
+// 		d.style.transition = "1.5s";
+// 	}
+
+// 	// Confirm Password Validation
+
+// 	var e = document.getElementById('password_repeat');
+
+// 	if(e.value==""){
+// 		e.style.borderColor = "red";
+// 		e.style.transition = "1.5s";
+// 		count++;
+// 	}
+// 	else if (d.value && e.value){
+// 		if(!d.value==""){
+// 			if(d.value == e.value){
+// 				e.style.borderColor = "";
+// 				e.style.transition = "1.5s";
+// 			}else{
+// 		e.value = "";
+// 		d.value = "";
+// 		d.style.borderColor = "red";
+// 		e.style.borderColor = "red";
+// 		e.style.transition = "1.5s";
+// 		d.style.transition = "1.5s";
+// 		d.focus();
+// 			}
+// 		}else{}		
+// 		count++;	
+// 	}
+// 	else{
+// 		e.style.borderColor = "";
+// 		e.style.transition = "1.5s";
+// 	}
+
+// 	// Gender Validation
+
+// 	var f = document.getElementsByName('gender');
+// 	var g_valid = false;
+// 	// console.log(f.length);
+// 	var i = 0;
+// 	while (!g_valid && i < f.length){
+// 		if(f[i].checked){
+// 			g_valid = true;
+// 			count++;
+// 		}
+// 		i++;
+// 	}
+// 	if(!g_valid){
+// 		document.getElementById('gender_validate_m').innerHTML = "*";
+// 		document.getElementById('gender_validate_f').innerHTML = "*";
+// 		count++;
+// 	}else{
+// 		document.getElementById('gender_validate_m').innerHTML = "";
+// 		document.getElementById('gender_validate_f').innerHTML = "";
+// 	}
+
+// 	// Checkbox Validation
+
+// 	var g = document.getElementById('checkbox');
+
+// 	if(!g.checked){
+// 		document.getElementById('checkbox_validate').innerHTML = "*";
+// 		count++;
+// 	}
+// 	else{
+// 		document.getElementById('checkbox_validate').innerHTML = "";
+// 	}
+
+// 	// if count greater than 0 then condition return false
+	
+// 	if(count > 0){
+// 		return false;
+// 	}
+
+// }
+
+#half code backup
+
+
+
+// 	if($name || $email || $phone || $password){
+// 		if(preg_match("/^[a-zA-Z ]{3,10}$/",$name))
+// 		{
+// 		$data['nameerror']  = "invalid formate - min 3 and max 10 char";
+// 		}
+// 		if(!preg_match("/^[a-zA-Z]$/",$email)){
+// 		$data['emailerror'] = "invalid formate - example@domain.com";
+// 		}
+// 		if(!preg_match("/^[0-9]{10}$/",$phone)){
+// 		$data['phoneerror']  = "invalid number";
+// 		}
+// 		else if(!preg_match("/^[a-zA-Z0-9]{6,13}$/",$password)){
+// 		$data['passerror']  = "invalid formate - min 6 and max 13 alphanumeric"; 
+// 		}
+// 	}
+
+
+//backup of password data
+
+<div class="form-group">
+                    <input 
+                    class="form-control" 
+                    type="password" 
+                    name="password" 
+                    placeholder="Password" 
+                    ng-model="password" 
+                    id="password"
+                    onkeyup="password_validate();" 
+                    pattern="[a-zA-Z0-9]{6,13}"
+                    data-toggle = "password"
+                    required>
+                    
+                </div>
+
+
+                //cnf passowrd form data backup
+
+
+                
+
+
+                <div class="form-group">
+                    <input 
+                    class="form-control" 
+                    type="password" 
+                    name="password_repeat" 
+                    placeholder="Password (repeat)" 
+                    ng-model = "password_repeat" 
+                    id="password_repeat" 
+                    onkeyup="cnfm_pass_validate();"
+                    data-toggle = "password_repeat" 
+                    required>
+                    
+                </div>
+
+
+                ng-class = "{'error': frm.$submitted && frm.phone.$error.required}"
